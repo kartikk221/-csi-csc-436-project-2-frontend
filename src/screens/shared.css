@@ -1,8 +1,19 @@
+body {
+  background: black;
+  color: white;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: block;
+  padding: 10em;
+}
+
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+}
+
+h1 {
+  margin: 0;
 }
 
 .card {
@@ -11,4 +22,30 @@
 
 .read-the-docs {
   color: #888;
+}
+
+input, textarea {
+  width: 100%;
+  max-width: 86%;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  background-color: transparent;
+  outline: none;
+  border: solid 1px white;
+  font-size: 1em;
+}
+
+button {
+  width: 89%;
+  padding: 1em 2em;
+  background-color: white;
+  color: black;
+}
+
+.blog {
+  color: black;
+  background-color: white;
+  padding: 1em;
+  margin-top: 1em;
+  border-radius: 1em;
 }

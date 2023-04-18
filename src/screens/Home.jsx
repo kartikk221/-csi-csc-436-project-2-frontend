@@ -1,28 +1,36 @@
 import React from 'react';
-import './shared.css';
+import { useSelector } from 'react-redux';
 
-import { useListBlogs } from '../hooks/useListBlogs';
+import './shared.css';
+import BlogPostCard from '../components/BlogPostCard';
 
 function Home() {
-    const [blogs, reloadBlogs] = useListBlogs();
-    if (!blogs)
-        return (
-            <div className="App">
-                <h1>Loading Blog Posts...</h1>
-            </div>
-        );
-
-    console.log(blogs);
+    const posts = useSelector((state) => state.posts.posts);
 
     return (
         <div className="App">
-            <h1>Vite + React</h1>
-            <div className="card">
-                <p>
-                    Edit <code>src/App.jsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+            <div
+                style={{
+                    height: '100px'
+                }}
+            ></div>
+
+            {posts.map(({ id, ...props }) => (
+                <BlogPostCard key={id} id={id} {...props} />
+            ))}
+
+            {posts.length === 0 ? (
+                <>
+                    <h1>No Blog Posts Yet.</h1>
+                    <p>Get started by creating a new blog post.</p>
+                </>
+            ) : null}
+
+            <div
+                style={{
+                    height: '100px'
+                }}
+            ></div>
         </div>
     );
 }

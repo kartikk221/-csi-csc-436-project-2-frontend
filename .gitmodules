@@ -1,3 +1,6 @@
 [submodule "csi-csc-436-project-2-backend"]
 	path = csi-csc-436-project-2-backend
 	url = git@github.com:kartikk221/csi-csc-436-project-2-backend.git
+[submodule "dummy-blog-server"]
+	path = dummy-blog-server
+	url = https://github.com/matgargano/dummy-blog-server

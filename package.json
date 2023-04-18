@@ -5,7 +5,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "server": "cd csi-csc-436-project-2-backend && npm start",
+        "server": "cd dummy-blog-server && npm start",
         "build": "vite build",
         "preview": "vite preview"
     },
@@ -15,6 +15,7 @@
         "match-sorter": "^6.3.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
+        "react-redux": "^8.0.5",
         "react-router-dom": "^6.10.0",
         "redux": "^4.2.1",
         "sort-by": "^1.2.0"
@@ -23,6 +24,12 @@
         "@types/react": "^18.0.28",
         "@types/react-dom": "^18.0.11",
         "@vitejs/plugin-react-swc": "^3.0.0",
+        "eslint": "^8.38.0",
+        "eslint-config-standard": "^17.0.0",
+        "eslint-plugin-import": "^2.27.5",
+        "eslint-plugin-n": "^15.7.0",
+        "eslint-plugin-promise": "^6.1.1",
+        "eslint-plugin-react": "^7.32.2",
         "vite": "^4.2.0",
         "vitest": "^0.30.0"
     }
