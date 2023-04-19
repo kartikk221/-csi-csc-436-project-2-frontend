@@ -16,15 +16,9 @@ function BlogPostCard({ id, title, originally_published, last_updated }) {
                 #{id} - {title}
             </h2>
             <p>
-                Published on{' '}
-                <strong>
-                    {new Date(originally_published).toLocaleString()}
-                </strong>
+                Published on {new Date(originally_published).toLocaleString()}
             </p>
-            <p>
-                Last updated on{' '}
-                <strong>{new Date(last_updated).toLocaleString()}</strong>
-            </p>
+            <p>Last updated on {new Date(last_updated).toLocaleString()}</p>
             <NavLink
                 to={`/blog/${id}`}
                 style={{
