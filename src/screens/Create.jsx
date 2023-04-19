@@ -12,7 +12,7 @@ function Create() {
     const [inFlight, setInFlight] = useState(false);
 
     return (
-        <div className="card">
+        <div className="card blog-content">
             <h1
                 style={{
                     marginBottom: '2rem'

@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 
+import './BlogPostCard.css';
+
 function BlogPostCard({ id, title, originally_published, last_updated }) {
     const navigate = useNavigate();
 

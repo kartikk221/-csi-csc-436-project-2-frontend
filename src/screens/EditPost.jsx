@@ -21,7 +21,7 @@ function EditPost() {
     if (!post) return <h1>Post not found</h1>;
 
     return (
-        <div className="card">
+        <div className="card blog-content">
             <h1
                 style={{
                     marginBottom: '2rem'

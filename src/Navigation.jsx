@@ -23,13 +23,7 @@ function Navigation() {
         if (!initialized) {
             fetch('http://localhost:3001/v1/api/posts')
                 .then((response) => response.json())
-                .then(
-                    (_posts) =>
-                        setTimeout(
-                            () => dispatch(fetchPostsSetPosts(_posts)),
-                            500
-                        ) // TODO: REMOVE THIS
-                )
+                .then((_posts) => dispatch(fetchPostsSetPosts(_posts)))
                 .catch((error) => dispatch(fetchPostsSetError(error)));
         }
     }, [initialized]);

@@ -1,0 +1,18 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.blog {
+    transition: all .3s;
+    animation: fadeIn .5s;
+}
+
+.blog:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}

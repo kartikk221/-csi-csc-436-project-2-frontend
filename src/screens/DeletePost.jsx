@@ -17,7 +17,7 @@ export function DeleteBlogPost() {
 
     const { title } = post;
     return (
-        <>
+        <div className="blog-content">
             <h1
                 style={{
                     fontSize: '4em'
@@ -93,7 +93,7 @@ export function DeleteBlogPost() {
                     </NavLink>
                 </p>
             )}
-        </>
+        </div>
     );
 }
 

@@ -13,7 +13,7 @@ export function BlogPost() {
 
     const { title, content, originally_published, last_updated } = post;
     return (
-        <>
+        <div className="blog-content">
             <h1
                 style={{
                     fontSize: '4em'
@@ -50,21 +50,13 @@ export function BlogPost() {
                 }}
             >
                 <NavLink
-                    to={`/`}
-                    style={{
-                        fontSize: '2em'
-                    }}
-                >
-                    Go Back
-                </NavLink>
-                <NavLink
                     to={`/blog/${id}/edit`}
                     style={{
                         fontSize: '2em',
                         color: 'aquamarine'
                     }}
                 >
-                    Edit
+                    Edit Post #{id}
                 </NavLink>
                 <NavLink
                     to={`/blog/${id}/delete`}
@@ -73,10 +65,10 @@ export function BlogPost() {
                         color: 'red'
                     }}
                 >
-                    Delete
+                    Delete Post #{id}
                 </NavLink>
             </p>
-        </>
+        </div>
     );
 }
 
