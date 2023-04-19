@@ -4,11 +4,22 @@ import './Navbar.css'; // Import your CSS file
 
 function Navbar({ title = 'CSC 436 Project 2', footer = false }) {
     const location = useLocation();
+    const id = +(
+        location.pathname.split('blog/')?.[1]?.split?.('/')?.[0] || '-1'
+    );
     const links = [
         {
             name: 'Home',
             path: '/'
         },
+        ...(id > -1
+            ? [
+                  {
+                      name: 'Post #' + id,
+                      path: '/blog/' + id
+                  }
+              ]
+            : []),
         {
             name: 'Create New Post',
             path: '/create'

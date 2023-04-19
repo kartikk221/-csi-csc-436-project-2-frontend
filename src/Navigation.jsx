@@ -9,11 +9,11 @@ import './screens/shared.css';
 import Home from './screens/Home.jsx';
 import Create from './screens/Create.jsx';
 import BlogPost from './screens/BlogPost.jsx';
+import EditPost from './screens/EditPost.jsx';
 import DeleteBlogPost from './screens/DeletePost.jsx';
 
 function Navigation() {
     const dispatch = useDispatch();
-    const posts = useSelector((state) => state.posts.posts);
     const error = useSelector((state) => state.posts.error);
     const initialized = useSelector((state) => state.posts.initialized);
 
@@ -27,7 +27,7 @@ function Navigation() {
                     (_posts) =>
                         setTimeout(
                             () => dispatch(fetchPostsSetPosts(_posts)),
-                            0
+                            500
                         ) // TODO: REMOVE THIS
                 )
                 .catch((error) => dispatch(fetchPostsSetError(error)));
@@ -42,7 +42,8 @@ function Navigation() {
                     <Route path="/" Component={Home} />
                     <Route path="/create" Component={Create} />
                     <Route path="/blog/:id" Component={BlogPost} />
-                    <Route path="/delete/:id" Component={DeleteBlogPost} />
+                    <Route path="/blog/:id/edit" Component={EditPost} />
+                    <Route path="/blog/:id/delete" Component={DeleteBlogPost} />
                 </Routes>
             ) : error ? (
                 <h1 style={{ color: 'red' }}>

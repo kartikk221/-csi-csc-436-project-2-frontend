@@ -58,7 +58,7 @@ export function BlogPost() {
                     Go Back
                 </NavLink>
                 <NavLink
-                    to={`/edit/${id}`}
+                    to={`/blog/${id}/edit`}
                     style={{
                         fontSize: '2em',
                         color: 'aquamarine'
@@ -67,7 +67,7 @@ export function BlogPost() {
                     Edit
                 </NavLink>
                 <NavLink
-                    to={`/delete/${id}`}
+                    to={`/blog/${id}/delete`}
                     style={{
                         fontSize: '2em',
                         color: 'red'
